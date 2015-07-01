@@ -1,0 +1,311 @@
+@font-face {
+    font-family: 'CM8Video';
+    src:url('http://ch2lb.checkm8.com/data/static/cm8-video.eot');
+    src:url('http://ch2lb.checkm8.com/data/static/cm8-video.eot') format('embedded-opentype'),
+    url('http://ch2lb.checkm8.com/data/static/cm8-video.woff') format('woff'),
+    url('http://ch2lb.checkm8.com/data/static/cm8-video.ttf') format('truetype'),
+    url('http://ch2lb.checkm8.com/data/static/cm8-video.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.vjs-default-skin .vjs-control:before {
+    font-family: 'CM8Video';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* keep hand icon on the video for clickthrough */
+.vjs-default-skin .vjs-tech {
+    cursor: pointer;
+}
+
+.vjs-default-skin .vjs-big-play-button {
+    left: 0.5em;
+    top: 0.5em;
+    font-size: 3em; /* Change size here to resize the big button */
+    display: block;
+    z-index: 2;
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    opacity: 1;
+    /* Need a slightly gray bg so it can be seen on black backgrounds */
+    /* background-color-with-alpha */
+    background-color: #07141e;
+    background-color: rgba(7, 20, 30, 0.7);
+    border: 0.1em solid #3b4249;
+    /* border-radius */
+    /*-webkit-border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    border-radius: 0.8em;*/
+    -webkit-border-radius: 180%;
+    -moz-border-radius: 180%;
+    border-radius: 180%;
+    /* box-shadow */
+    -webkit-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+    /* transition */
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+/* Optionally center */
+.vjs-default-skin.vjs-big-play-centered .vjs-big-play-button {
+    /* Center it horizontally */
+    left: 50%;
+    margin-left: -2.1em;
+    /* Center it vertically */
+    top: 50%;
+    margin-top: -2em;
+}
+.vjs-default-skin .vjs-big-play-button:before {
+    content: "\f04b";
+    font-family: CM8Video;
+    line-height: 2em;
+    font-size: 2em;
+    margin-left: 0.1em;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Big RePlay Button (replay button at end)
+--------------------------------------------------------------------------------
+Positioning of the replay button in the center or other corners can be done more
+easily in the skin designer. http://designer.videojs.com/
+*/
+.vjs-default-skin .vjs-big-replay-button {
+    left: 0.5em;
+    top: 0.5em;
+    font-size: 3em;
+    display: block;
+    z-index: 2;
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    opacity: 1;
+    /* Need a slightly gray bg so it can be seen on black backgrounds */
+    /* background-color-with-alpha */
+    background-color: #07141e;
+    background-color: rgba(7, 20, 30, 0.7);
+    border: 0.1em solid #3b4249;
+    /* border-radius */
+    /*
+    -webkit-border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    border-radius: 0.8em;
+    */
+    -webkit-border-radius: 180%;
+    -moz-border-radius: 180%;
+    border-radius: 180%;
+    /* box-shadow */
+    -webkit-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 0px 1em rgba(255, 255, 255, 0.25);
+    /* transition */
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+
+    /* hide at the start*/
+    display:none;
+}
+/* bigger button when in fullscreen */
+.vjs-default-skin.vjs-fullscreen .vjs-big-replay-button {
+    font-size: 7em;
+}
+
+/* Optionally center */
+.vjs-default-skin.vjs-big-play-centered .vjs-big-replay-button {
+    /* Center it horizontally */
+    left: 50%;
+    margin-left: -2.1em;
+    /* Center it vertically */
+    top: 50%;
+    margin-top: -2em;
+}
+/* Hide if controls are disabled */
+.vjs-default-skin.vjs-controls-disabled .vjs-big-replay-button {
+    display: none;
+}
+/* Show when video has ended */
+.vjs-default-skin.vjs-has-ended .vjs-big-replay-button {
+    display: block;
+}
+/* Hide on mobile devices. Remove when we stop using native controls
+    by default on mobile  */
+.vjs-default-skin.vjs-using-native-controls .vjs-big-replay-button {
+    display: none;
+}
+.vjs-default-skin:hover .vjs-big-replay-button,
+.vjs-default-skin .vjs-big-replay-button:focus {
+    outline: 0;
+    border-color: #fff;
+    /* IE8 needs a non-glow hover state */
+    background-color: #505050;
+    background-color: rgba(50, 50, 50, 0.75);
+    /* box-shadow */
+    -webkit-box-shadow: 0 0 3em #ffffff;
+    -moz-box-shadow: 0 0 3em #ffffff;
+    box-shadow: 0 0 3em #ffffff;
+    /* transition */
+    -webkit-transition: all 0s;
+    -moz-transition: all 0s;
+    -o-transition: all 0s;
+    transition: all 0s;
+}
+.vjs-default-skin .vjs-big-replay-button:before {
+    content: "\f01e";
+    font-family: CM8Video;
+    /*
+    content: "\f01e";
+    font-family: FontAwesome;
+    */
+    /* In order to center the play icon vertically we need to set the line height
+       to the same as the button height */
+
+    line-height: 2em;
+    font-size: 2em;
+    text-shadow: 0.05em 0.05em 0.1em #000;
+    text-align: center /* Needed for IE8 */;
+    position: absolute;
+    left: 0;
+    margin-left: 0.07em;
+    width: 100%;
+    height: 100%;
+
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* Play/Pause Control
+--------------------------------------------------------------------------------
+Hide it when video has ended (replay button will be shown instead)
+*/
+.vjs-default-skin.vjs-has-ended .vjs-play-control {
+    display: none;
+}
+.vjs-default-skin .vjs-play-control:before {
+    content: "\f04b";
+}
+.vjs-default-skin.vjs-playing .vjs-play-control:before {
+    content: "\f04c";
+}
+/* Replay Control Button
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-replay-button {
+    width: 5em;
+    cursor: pointer;
+    display: none;
+}
+.vjs-control.vjs-replay-button:before {
+    content: "\f01e";
+    font-family: CM8Video;
+}
+/* display replay button only when the video has ended */
+.vjs-default-skin.vjs-has-ended .vjs-replay-button {
+    display: block;
+}
+/* Stop Control Button
+--------------------------------------------------------------------------------
+*/
+.vjs-default-skin .vjs-stop-button {
+    width: 5em;
+    cursor: pointer;
+}
+.vjs-control.vjs-stop-button:before {
+    font-family: CM8Video;
+    content: "\f04d";
+}
+/* Time Control
+--------------------------------------------------------------------------------
+position the time control just to the left of the sound button
+*/
+.vjs-default-skin .vjs-time-controls,
+.vjs-default-skin .vjs-time-divider {
+    position: absolute;
+}
+.vjs-default-skin .vjs-current-time {
+    right: 12.3em;
+}
+.vjs-default-skin .vjs-time-divider {
+    right: 12em;
+}
+.vjs-default-skin .vjs-duration {
+    right: 8em;
+}
+
+/* Volume Mute/Unmute
+--------------------------------------------------------------------------------
+Hide the volume bar
+*/
+.vjs-default-skin .vjs-volume-control {
+    display: none;
+}
+.vjs-default-skin .vjs-mute-control:before,
+.vjs-default-skin .vjs-volume-menu-button:before {
+    content: "\f028";
+    font-family: CM8Video;
+}
+.vjs-default-skin .vjs-mute-control.vjs-vol-0:before,
+.vjs-default-skin .vjs-volume-menu-button.vjs-vol-0:before {
+    content: "\f026";
+    font-family: CM8Video;
+}
+
+/* Fullscreen On/Off
+--------------------------------------------------------------------------------
+Choose our font glyph
+*/
+.vjs-default-skin .vjs-fullscreen-control:before {
+    content: "\f065";
+}
+/* Switch to the exit icon when the player is in fullscreen */
+.vjs-default-skin.vjs-fullscreen .vjs-fullscreen-control:before {
+    content: "\f066";
+}
+
+/* Progress
+--------------------------------------------------------------------------------
+Color it gray
+*/
+.vjs-default-skin .vjs-play-progress {
+    /*
+      Using a data URI to create the white diagonal lines with a transparent
+        background. Surprisingly works in IE8.
+        Created using http://www.patternify.com
+      Changing the first color value will change the bar color.
+      Also using a paralax effect to make the lines move backwards.
+        The -50% left position makes that happen.
+    */
+
+    background: #444 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAP0lEQVQIHWWMAQoAIAgDR/QJ/Ub//04+w7ZICBwcOg5FZi5iBB82AGzixEglJrd4TVK5XUJpskSTEvpdFzX9AB2pGziSQcvAAAAAAElFTkSuQmCC) -50% 0 repeat;
+}
+.vjs-default-skin .vjs-load-progress {
+    background: #666 /* IE8- Fallback */;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.vjs-default-skin .vjs-load-progress {
+    background: #7F6AA6 /* IE8- Fallback */;
+    background: rgba(255, 255, 255, 0.1);
+}
