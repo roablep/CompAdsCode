@@ -1,0 +1,422 @@
+/***************************************************
+http://ch2lb.checkm8.com/data/814941/main.css
+ * CheckM8 Flex Unit Generator CSS
+ * -------------------------------
+ * @author:  Joel Regus, updated by Philip Browning
+ * @version: v1.2
+ * @updated: 6/16/2015
+ ***************************************************/
+
+body {
+	height: 300px;
+	position: relative;
+	cursor: pointer;
+}
+
+div {
+	-webkit-transition: all 1s; /* Safari */
+    transition: all 1s;
+}
+
+img.responsive {
+    height: auto;
+    width: 100%;
+}
+
+.button {
+	cursor: pointer;
+}
+
+/***************************************************
+ * Video JS
+ ***************************************************/
+
+/* Responsive Video Base Setup, using an intrisnic ratio container */
+
+.video-player {
+    position: relative;
+    margin: 0 auto;
+}
+
+.video-player > .video-ratio-container {
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 Ratio */
+    position: relative;
+}
+
+#video-container .video-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Hide Fullscreen Button in VideoJS */
+.vjs-fullscreen-control {
+    display: none !important;
+}
+
+/* Ensure the poster displays fully over the video */
+.vjs-poster {
+    background-size: cover !important;
+}
+
+/* Ensure the video displays fully within its container */
+video {
+    object-fit: contain;
+}
+
+/***************************************************
+ * Hero Unit
+ ***************************************************/
+
+
+.cta {
+	display: block;
+	position: absolute;
+	z-index: 8;
+	background-image: url("cta.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.video {
+	display: block;
+	position: absolute;
+	z-index: 7;
+	background-color: #000;
+	border: 3px solid #ec0928;
+}
+
+.copy {
+	display: block;
+	position: absolute;
+	z-index: 6;
+	background-image: url("copy.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.revlon_ultra_hd_lipstick {
+	display: block;
+	position: absolute;
+	z-index: 5;
+	background-image: url("revlon_ultra_hd_lipstick.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.border {
+	display: block;
+	width: calc(100% - 6px);
+	height: 294px;
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: 4;
+	border: 3px solid #ec0928;
+}
+
+.revlon_love_is_on {
+	display: block;
+	position: absolute;
+	z-index: 2;
+	background-image: url("revlon_love_is_on.jpg");
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.background {
+	display: block;
+	width: 100%;
+	height: 300px;
+	left: 0;
+	top: 0;
+	position: absolute;
+	z-index: 1;
+	background-color: #fff;
+}
+
+/* Revon-Hero_Unit_Refresh-320x300_V5.psd */
+
+@media (max-width: 580px) {
+	.cta {
+		width: 136px;
+		height: 24px;
+		left: 50%;
+		top: 89%;
+	
+		margin-left: -68px;
+}
+
+	.video {
+		width: 320px;
+		height: 180px;
+		left: 50%;
+		top: 18%;
+	
+		margin-left: -160px;
+}
+
+	.copy {
+		display: none;
+	}
+
+	.revlon_ultra_hd_lipstick {
+		width: 285px;
+		height: 51px;
+		left: 50%;
+		top: 82%;
+		background-image: url("600x300_revlon_ultra_hd_lipstick.png");
+	
+		margin-left: -142px;
+}
+
+	.lipstick {
+		display: none;
+		width: 0;
+		height: 0;
+		left: 0;
+		top: 0;
+		position: absolute;
+		z-index: 3;
+		background-image: url("lipstick.png");
+	}
+
+	.revlon_love_is_on {
+		width: 450px;
+		height: 296px;
+		left: 50%;
+		top: -222px;
+		background-image: url("600x300_revlon_love_is_on.jpg");
+	
+		margin-left: -225px;
+}
+	.vjs-big-replay-button {
+		top: 39% !important;
+	}
+
+}
+
+/* Revon-Hero_Unit_Refresh-600x300_V5.psd */
+
+@media (min-width: 581px) and (max-width: 900px) {
+	.cta {
+		width: 149px;
+		height: 27px;
+		left: 100%;
+		top: 87%;
+	
+		margin-left: -269px;
+}
+
+	.video {
+		width: 384px;
+		height: 216px;
+		left: 100%;
+		top: 0;
+		margin-left: -390px;
+}
+
+	.copy {
+		display: none;
+	}
+
+	.revlon_ultra_hd_lipstick {
+		width: 305px;
+		height: 16px;
+		left: 100%;
+		top: 78%;
+		background-image: url("600x300_revlon_ultra_hd_lipstick.png");
+	
+		margin-left: -350px;
+}
+
+	.lipstick {
+		display: none;
+	}
+
+	.revlon_love_is_on {
+		width: 480px;
+		height: 294px;
+		left: 50%;
+		top: 3px;
+		background-image: url("600x300_revlon_love_is_on.jpg");
+	
+		margin-left: -433px;
+}
+
+}
+
+/* Revon-Hero_Unit_Refresh-1000x300_V5.psd */
+
+@media (min-width: 901px) and (max-width: 1100px) {
+	.cta {
+		width: 177px;
+		height: 32px;
+		left: 75%;
+		top: 72%;
+	
+		margin-left: 12px;
+}
+
+	.video {
+		width: 423px;
+		height: 238px;
+		left: 50%;
+		top: 10%;
+	
+		margin-left: -231px;
+}
+
+	.copy {
+		width: 220px;
+		height: 68px;
+		left: 75%;
+		top: 44%;
+		background-image: url("1280x300_copy.png");
+	
+		margin-left: -12px;
+}
+
+	.revlon_ultra_hd_lipstick {
+		width: 150px;
+		height: 80px;
+		left: 75%;
+		top: 12%;
+		background-image: url("1000x300_revlon_ultra_hd_lipstick.png");
+	
+		margin-left: 26px;
+}
+
+	.lipstick {
+		display: none;
+	}
+
+	.revlon_love_is_on {
+		width: 518px;
+		height: 282px;
+		left: 25%;
+		top: 6%;
+	
+		margin-left: -375px;
+}
+
+}
+
+/* Revon-Hero_Unit_Refresh-1280x300_V5.psd */
+
+@media (min-width: 1101px) and (max-width: 1500px) {
+	.cta {
+		width: 193px;
+		height: 36px;
+		left: 80%;
+		top: 71%;
+	
+		margin-left: -35px;
+}
+
+	.video {
+		width: 464px;
+		height: 261px;
+		left: 60%;
+		top: 16px;
+	
+		margin-left: -340px;
+}
+
+	.copy {
+		width: 222px;
+		height: 65px;
+		left: 80%;
+		top: 43%;
+		background-image: url("1280x300_copy.png");
+		margin-left: -49px;
+}
+
+	.revlon_ultra_hd_lipstick {
+		width: 289px;
+		height: 50px;
+		left: 80%;
+		top: 19%;
+	
+		margin-left: -78px;
+}
+
+	.lipstick {
+		display: none;
+	}
+
+	.revlon_love_is_on {
+		width: 546px;
+		height: 297px;
+		left: 25%;
+		top: 1%;
+	
+		margin-left: -380px;
+}
+
+}
+
+/* Revon-Hero_Unit_Refresh-1920x300_V5.psd */
+
+@media (min-width: 1501px) {
+	.cta {
+		width: 259px;
+		height: 46px;
+		left: 60%;
+		top: 69%;
+	
+		margin-left: 69px;
+}
+
+	.video {
+		width: 466px;
+		height: 262px;
+		left: 40%;
+		top: 16px;
+	
+		margin-left: -193px;
+}
+
+	.copy {
+		width: 407px;
+		height: 49px;
+		left: 60%;
+		top: 45%;	
+		margin-left: -10px;
+}
+
+	.revlon_ultra_hd_lipstick {
+		width: 366px;
+		height: 64px;
+		left: 60%;
+		top: 15%;
+	
+		margin-left: 10px;
+}
+
+	.lipstick {
+		display: block;
+		width: 442px;
+		height: 294px;
+		left: 80%;
+		top: 1%;
+		position: absolute;
+		z-index: 3;
+		background-image: url("lipstick.png");
+	
+		margin-left: -58px;
+}
+
+	.revlon_love_is_on {
+		width: 546px;
+		height: 297px;
+		left: 25%;
+		top: 1%;	
+		margin-left: -500px;
+}
+
+}
+
